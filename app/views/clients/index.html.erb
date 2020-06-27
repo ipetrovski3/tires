@@ -1,0 +1,25 @@
+
+<div class="container is-fluid">
+    <p><%= link_to 'Внеси гуми на чување', new_warehouse_client_path, class:"button is-large is-danger" %></p>
+
+  <table class="table is-bordered">
+    <thead>
+      <tr>
+        <th>Име и презиме</th>
+        <th>Регистрација</th>
+        <th>Димензија</th>
+        <th>Бренд</th>
+        <th>Количина</th>
+      </tr>
+      <tr>
+        <% @clients.each do |c| %>
+          <th><%= link_to c.name, warehouse_client_path(c.warehouse, c) %></th>
+          <th><%= c.plate %></th>
+          <th><%= c.dimension %></th>
+          <th><%= c.brand %></th>
+          <th><%= c.qty %></th>
+      </tr>
+        <% end %>
+    </thead>
+  </table>
+</div>

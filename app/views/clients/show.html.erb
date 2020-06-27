@@ -1,0 +1,40 @@
+<div class="columns is-multiline">
+  <div class="column is-half is-offset-one-quarter">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title"><strong>Документ број: </strong><%="#{@warehouse.id}-#{ @client.id}/#{time_mod}"%></p>
+      </header>
+      <div class="card-content">
+        <table class="table is-centered is-bordered ">
+          <thead>
+            <tr>
+              <th>Име и презиме</th>
+              <th class="clientview"><%= @client.name %></th>
+            </tr>
+            <tr>
+              <th>Регистрација:</th>
+              <th><%= @client.plate %></th>
+            </tr>
+            <tr>
+              <th>Димензија:</th>
+              <th><%= @client.dimension %></th>
+            </tr>
+            <tr>
+              <th>Бренд:</th>
+              <th><%= @client.brand %></th>
+            </tr>
+            <tr>
+              <th>Количина:</th>
+              <th><%= @client.qty %></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">Save</a>
+          <a href="#" class="card-footer-item">Edit</a>
+          <a href="#" class="card-footer-item">Delete</a>
+        </footer>
+    </div>
+  </div>
+</div>

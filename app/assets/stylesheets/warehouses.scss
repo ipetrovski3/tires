@@ -1,0 +1,18 @@
+// Place all the styles related to the Warehouses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+a:link, a:visited {
+  border: none;
+  color: inherit;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+ font-size: 16px;
+ cursor: pointer;
+ display: inline-block;
+}
+
+a:hover, a:active {
+  color: black;
+}
