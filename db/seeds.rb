@@ -16,7 +16,6 @@ CSV.foreach('lib/seeds/Book2.csv', headers: true, encoding: 'ISO-8859-1', col_se
   c.brand = row['brand']
   c.qty = row['qty']
   c.location = row['location']
-  c.magacin_id = row['magacin_id']
   c.save
   puts "#{c.name}, #{c.plate} saved"
 end

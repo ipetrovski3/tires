@@ -3,3 +3,6 @@ class WarehousesController < ApplicationController
     @warehouses = Warehouse.all
   end
 end
+
+
+private

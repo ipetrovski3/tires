@@ -31,9 +31,8 @@
         </table>
       </div>
         <footer class="card-footer">
-          <a href="#" class="card-footer-item">Save</a>
-          <a href="#" class="card-footer-item">Edit</a>
-          <a href="#" class="card-footer-item">Delete</a>
+        <%= link_to 'Измени', edit_warehouse_client_path %>
+        <%= link_to 'DOWNLOAD PDF', warehouse_client_path(@warehouse, format: :pdf) %>
         </footer>
     </div>
   </div>
