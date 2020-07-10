@@ -1,3 +1,29 @@
 // Place all the styles related to the clients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+ .printform {
+   height: 148mm;
+   width: 240mm;
+   border: 1px solid black;
+   margin-left: 11mm;
+ }
+ .printcard {
+   height: 110mm;
+   width: 175mm;
+
+ }
+ .table td, .table th {
+   border: 1px solid black;
+   width: 170mm;
+ }
+
+ input[type="radio"], label{
+  float:left;
+ }
+input{
+clear:left;
+}
+.is-primary {
+ background-color: red !important;
+}

@@ -1,0 +1,2 @@
+module ComintentsHelper
+end

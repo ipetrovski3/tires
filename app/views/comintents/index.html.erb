@@ -1,0 +1,4 @@
+<% @comintents.each do |c| %>
+
+<%= link_to c.name, warehouse_comintent_path(c.warehouse, c) %>
+<% end %>

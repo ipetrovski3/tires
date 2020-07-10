@@ -1,11 +1,11 @@
 
 <div class="container is-fluid">
-    <p><%= link_to 'Внеси гуми на чување', new_warehouse_client_path, class:"button is-large is-danger" %></p>
+    <p><%= link_to 'Внеси гуми на чување', new_warehouse_comintent_path, class:"button is-large is-primary" %></p>
 
   <table class="table is-bordered">
     <thead>
       <tr>
-        <th>Име и презиме</th>
+        <th><%= @comintent.name %></th>
         <th>Регистрација</th>
         <th>Димензија</th>
         <th>Бренд</th>

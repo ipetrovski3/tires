@@ -1,12 +1,16 @@
-<div class="columns is-multiline">
-  <div class="column is-half is-offset-one-quarter">
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title"><strong>Документ број: </strong><%="#{@warehouse.id}-#{ @client.id}/#{time_mod}"%></p>
+<header class="header has-text-centered"><strong> ДОКУМЕНТ ЗА ГУМИ НА ЧУВАЊЕ</strong> </header>
+ <br>
+  <div class="columns is-mobile is-centered">
+    <div class="card printform">
+      <div>
+        <header class="card header pl-3 pr-3">
+         <p><strong>Документ број:<%="  #{@warehouse.id}-#{ @client.id}/#{time_mod}"%></strong></p>
+         <p><strong>Датум: <%=@client.created_at.strftime("%d.%m.%Y  %H:%M:%S")%> </strong></p>
       </header>
+      </div>
       <div class="card-content">
-        <table class="table is-centered is-bordered ">
-          <thead>
+        <table class="table is-bordered ">
+          <thead class="printcart">
             <tr>
               <th>Име и презиме</th>
               <th class="clientview"><%= @client.name %></th>
@@ -30,10 +34,19 @@
           </thead>
         </table>
       </div>
-        <footer class="card-footer">
-        <%= link_to 'Измени', edit_warehouse_client_path %>
-        <%= link_to 'DOWNLOAD PDF', warehouse_client_path(@warehouse, format: :pdf) %>
-        </footer>
+       <% unless request.format.to_sym == :pdf %>
+        <table class="table is-bordered ">
+          <thead class="printcart">
+            <tr>
+              <th><%= link_to 'Измени', edit_warehouse_comintent_client_path, class:"card-footer-item" %></th>
+              <th><%= link_to 'Печати Документ',  warehouse_comintent_client_path(@warehouse, format: :pdf), :target => "_blank", class:"card-footer-item" %></th>
+        <% end %>
+        <% if request.format.to_sym == :pdf %>
+           <div class="content ml-2" >
+   <li> При подигнување на гумите задолжително да се приложи овој документ </li>
+   <li> Чувањето на гумите се однесува на една сезона </li>
+   <li> Пнеуматик не сноси одговорност за било каква материјална штета предизвикана од елементарни непогоди и виша сила </li>
+   </div>
+      <% end %>
     </div>
   </div>
-</div>

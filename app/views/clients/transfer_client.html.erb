@@ -1,0 +1,37 @@
+
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Пренос во Магацин
+      </h1>
+      <h2 class="subtitle">
+        Моментална локација на гумите: Магацин <%= @warehouse.location %>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<div class="columns is-mobile mt-5">
+  <div class="column is-half is-offset-one-quarter">
+    <div class="field">
+      <div class="control">
+          <%= form_with model: [@warehouse, @client], local: true do |f| %>
+              <%= f.collection_radio_buttons( :warehouse_id, Warehouse.all, :id, :location) do |b| %>
+              <%= b.label(:"data-value" => b.value, class:"input") { b.radio_button + b.text } %>
+                <% end%>
+            <div class="control"><%= f.submit "Внеси во база", class:"button is-danger" %>
+            <%= link_to 'Поништи', warehouse_client_path(@client.warehouse, @client), class:"button is-danger is-outlined" %>
+            </div>
+                          <% end %>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

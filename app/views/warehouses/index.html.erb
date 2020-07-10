@@ -1,4 +1,4 @@
 <h1 class="title text-strong">Избери Магацин:</h1>
 <% @warehouses.each do |w| %>
-<button class="button is-danger mb-3"><%= link_to  w.location, warehouse_clients_path(w) %></button>
+<button class="button is-primary mb-3"><%= link_to  w.location, warehouse_comintents_path(w) %></button>
 <% end %>

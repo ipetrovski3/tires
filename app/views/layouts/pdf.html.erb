@@ -5,6 +5,10 @@
     <%= wicked_pdf_stylesheet_link_tag "application" %>
 </head>
 <body>
-    <%= yield %>
+ <%= image_tag wicked_pdf_asset_base64('logo') %>
+   <%= yield %>
+   </br>
+   <%= image_tag wicked_pdf_asset_base64('logo') %>
+   <%= yield %>
 </body>
 </html>

@@ -8,7 +8,7 @@
 
 require 'csv'
 
-CSV.foreach('lib/seeds/Book2.csv', headers: true, encoding: 'ISO-8859-1', col_sep: ';') do |row|
+CSV.foreach('lib/seeds/Book.csv', headers: true, encoding: 'ISO-8859-1', col_sep: ';') do |row|
   c = Client.new
   c.name = row['name']
   c.plate = row['plate']

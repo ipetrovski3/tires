@@ -1,0 +1,14 @@
+
+<%=
+   link_to_if(@client.nil?, @comintent.name, { controller: "comintents", action: "show" }) do
+     link_to @comintent.name, warehouse_comintent_client_path(@warehouse, @comintent, @comintent.client_ids)
+   end
+%>
+
+
+<ul><%= @comintent.phone %></ul>
+<ul><%= @comintent.email %></ul>
+
+<% @clients.each do |c| %>
+<%=link_to c.plate, warehouse_comintent_client_path(@warehouse, c.comintent, c)  %>
+<% end %>

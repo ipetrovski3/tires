@@ -1,3 +1,3 @@
 class Warehouse < ApplicationRecord
-  has_many :clients
+  has_many :comintents
 end
